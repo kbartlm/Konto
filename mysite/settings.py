@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'endless_pagination',
     'blog',
 )
 
@@ -113,6 +114,11 @@ STATIC_ROOT='staticfiles'
 LOGIN_REDIRECT_URL = '/'
 
 DEBUG=False
+
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+TEMPLATE_CONTEXT_PROCESSORS += (
+    'django.core.context_processors.request',
+)
 
 try:
     from .local_settings import *

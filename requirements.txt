@@ -4,4 +4,5 @@ gunicorn==19.3.0
 whitenoise==1.0.6
 psycopg2==2.5.4
 JPype1-py3==0.5.5.2
+django-endless-pagination=2.0
 
